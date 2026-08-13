@@ -1,111 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="theme-color"
-        content="#09040f"
-    >
+    <title>Vinz ♡</title>
 
     <meta
         name="description"
-        content="Vinz — Voice Actor, gamer, músico e criador."
+        content="Vinz — Voice Acting, dublagem, games, anime e outras coisas que eu gosto."
     >
-
-    <title>Vinz — 紫音工房</title>
-
-
-    <!-- =====================================================
-         FONTES
-         ===================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
-
 
     <style>
 
         /* =====================================================
-           VARIÁVEIS
+           VINZ — PERSONAL CARD
            ===================================================== */
 
         :root {
+            --bg: #09070d;
+            --bg-2: #0e0a15;
 
-            --black:
-                #050307;
+            --purple: #8d4dff;
+            --purple-light: #c59aff;
+            --pink: #e4a8ff;
 
-            --background:
-                #09040f;
+            --text: #f4edff;
+            --soft: #c7bdd3;
+            --muted: #81768d;
 
-            --background-2:
-                #11071a;
+            --line: rgba(218, 185, 255, .12);
+            --glass: rgba(255, 255, 255, .045);
 
-            --surface:
-                rgba(24, 10, 35, .72);
-
-            --surface-light:
-                rgba(45, 18, 62, .72);
-
-            --purple:
-                #6c27b8;
-
-            --purple-light:
-                #a855f7;
-
-            --violet:
-                #c45cff;
-
-            --pink:
-                #e39aff;
-
-            --gold:
-                #d6ad67;
-
-            --gold-light:
-                #f1d18d;
-
-            --white:
-                #f7efff;
-
-            --text:
-                #e7d9ef;
-
-            --muted:
-                #a99caf;
-
-            --border:
-                rgba(210, 160, 255, .18);
-
-            --glass:
-                rgba(255,255,255,.035);
-
-            --radius:
-                28px;
-
-            --radius-small:
-                17px;
-
-            --shadow:
-                0 30px 90px rgba(0,0,0,.45);
-
+            --radius: 26px;
         }
 
 
@@ -114,576 +49,320 @@
            ===================================================== */
 
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
         }
 
 
         html {
-
-            scroll-behavior:
-                smooth;
-
+            scroll-behavior: smooth;
         }
 
 
         body {
+            min-height: 100vh;
 
-            min-height:
-                100vh;
-
-            overflow-x:
-                hidden;
-
-            color:
-                var(--text);
+            color: var(--text);
 
             font-family:
-                "Noto Sans JP",
-                Arial,
+                "Manrope",
                 sans-serif;
 
             background:
-
                 radial-gradient(
-                    circle at 10% 5%,
-                    rgba(116, 39, 184, .25),
-                    transparent 28%
+                    circle at 15% 10%,
+                    rgba(141, 77, 255, .18),
+                    transparent 27%
                 ),
 
                 radial-gradient(
-                    circle at 90% 20%,
-                    rgba(196, 92, 255, .18),
-                    transparent 30%
+                    circle at 90% 30%,
+                    rgba(228, 168, 255, .10),
+                    transparent 25%
                 ),
 
                 radial-gradient(
                     circle at 50% 100%,
-                    rgba(86, 24, 125, .25),
+                    rgba(96, 43, 151, .15),
                     transparent 35%
                 ),
 
-                var(--background);
+                var(--bg);
 
+            overflow-x: hidden;
         }
 
 
         body::before {
+            content: "";
 
-            content:
-                "";
+            position: fixed;
+            inset: 0;
 
-            position:
-                fixed;
+            pointer-events: none;
 
-            inset:
-                0;
-
-            pointer-events:
-                none;
-
-            z-index:
-                -3;
-
-            opacity:
-                .2;
+            opacity: .18;
 
             background-image:
-
                 radial-gradient(
-                    rgba(255,255,255,.6) 1px,
+                    rgba(255,255,255,.5) 1px,
                     transparent 1px
                 );
 
-            background-size:
-                55px 55px;
+            background-size: 34px 34px;
 
             mask-image:
                 linear-gradient(
                     to bottom,
                     black,
-                    transparent
+                    transparent 75%
                 );
 
+            z-index: -2;
         }
 
 
         body::after {
+            content: "";
 
-            content:
-                "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
 
-            position:
-                fixed;
+            left: 50%;
+            top: 40%;
 
-            inset:
-                0;
+            transform: translate(-50%, -50%);
 
-            pointer-events:
-                none;
-
-            z-index:
-                -2;
+            border-radius: 50%;
 
             background:
+                rgba(141, 77, 255, .055);
 
-                radial-gradient(
-                    ellipse at center,
-                    transparent 30%,
-                    rgba(0,0,0,.5) 100%
-                );
+            filter: blur(80px);
 
+            pointer-events: none;
+
+            z-index: -1;
         }
 
 
         ::selection {
-
-            background:
-                var(--violet);
-
-            color:
-                white;
-
+            background: var(--purple);
+            color: white;
         }
 
 
         a {
-
-            color:
-                inherit;
-
-            text-decoration:
-                none;
-
+            color: inherit;
+            text-decoration: none;
         }
 
 
         button {
-
-            font:
-                inherit;
-
-            border:
-                0;
-
+            font: inherit;
         }
 
 
         /* =====================================================
-           FLORES DECORATIVAS
+           DECORATIONS
            ===================================================== */
 
-        .wisteria {
+        .deco {
+            position: fixed;
 
-            position:
-                fixed;
+            color: rgba(197,154,255,.22);
 
-            top:
-                -20px;
+            pointer-events: none;
 
-            width:
-                190px;
+            user-select: none;
 
-            height:
-                320px;
+            z-index: -1;
 
-            pointer-events:
-                none;
-
-            z-index:
-                -1;
-
-            opacity:
-                .65;
-
+            animation:
+                float 7s ease-in-out infinite;
         }
 
 
-        .wisteria.left {
+        .deco.one {
+            left: 4%;
+            top: 15%;
 
-            left:
-                -55px;
-
+            font-size: 25px;
         }
 
 
-        .wisteria.right {
+        .deco.two {
+            right: 7%;
+            top: 11%;
 
-            right:
-                -55px;
+            font-size: 18px;
 
-            transform:
-                scaleX(-1);
-
+            animation-delay: 1.5s;
         }
 
 
-        .vine {
+        .deco.three {
+            left: 8%;
+            bottom: 20%;
 
-            position:
-                absolute;
+            font-size: 15px;
 
-            width:
-                3px;
-
-            border-radius:
-                999px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    var(--purple-light),
-                    transparent
-                );
-
+            animation-delay: 3s;
         }
 
 
-        .vine:nth-child(1) {
+        .deco.four {
+            right: 5%;
+            bottom: 12%;
 
-            left:
-                35px;
+            font-size: 28px;
 
-            height:
-                230px;
-
+            animation-delay: 2s;
         }
 
 
-        .vine:nth-child(2) {
+        @keyframes float {
 
-            left:
-                75px;
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+            }
 
-            height:
-                300px;
-
-        }
-
-
-        .vine:nth-child(3) {
-
-            left:
-                120px;
-
-            height:
-                250px;
-
-        }
-
-
-        .flower {
-
-            position:
-                absolute;
-
-            width:
-                17px;
-
-            height:
-                17px;
-
-            border-radius:
-                50% 50% 45% 45%;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #c86cff,
-                    #552080
-                );
-
-            box-shadow:
-                0 0 12px rgba(196,92,255,.35);
-
-        }
-
-
-        .flower::after {
-
-            content:
-                "";
-
-            position:
-                absolute;
-
-            width:
-                6px;
-
-            height:
-                6px;
-
-            top:
-                5px;
-
-            left:
-                5px;
-
-            border-radius:
-                50%;
-
-            background:
-                var(--gold-light);
-
-        }
-
-
-        .flower.f1 {
-            top: 70px;
-            left: 27px;
-        }
-
-        .flower.f2 {
-            top: 125px;
-            left: 65px;
-        }
-
-        .flower.f3 {
-            top: 190px;
-            left: 53px;
-        }
-
-        .flower.f4 {
-            top: 105px;
-            left: 110px;
-        }
-
-        .flower.f5 {
-            top: 235px;
-            left: 100px;
-        }
-
-        .flower.f6 {
-            top: 275px;
-            left: 35px;
+            50% {
+                transform:
+                    translateY(-12px)
+                    rotate(5deg);
+            }
         }
 
 
         /* =====================================================
-           HEADER
+           PAGE
            ===================================================== */
 
-        header {
+        .wrapper {
+            width: min(1080px, 92%);
 
-            position:
-                sticky;
-
-            top:
-                15px;
-
-            z-index:
-                1000;
-
-            width:
-                min(1180px, 92%);
-
-            margin:
-                15px auto 0;
+            margin: auto;
 
             padding:
-                10px 14px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                22px;
-
-            background:
-                rgba(8,3,13,.78);
-
-            backdrop-filter:
-                blur(25px);
-
-            -webkit-backdrop-filter:
-                blur(25px);
-
-            box-shadow:
-                0 15px 50px rgba(0,0,0,.3);
-
+                45px 0 80px;
         }
 
 
-        nav {
+        /* =====================================================
+           TOP BAR
+           ===================================================== */
 
-            display:
-                flex;
+        .topbar {
+            display: flex;
 
-            align-items:
-                center;
+            align-items: center;
+            justify-content: space-between;
 
-            justify-content:
-                space-between;
+            margin-bottom: 18px;
 
-            gap:
-                20px;
-
-        }
-
-
-        .brand {
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            gap:
-                11px;
-
-        }
-
-
-        .brand-avatar {
-
-            width:
-                43px;
-
-            height:
-                43px;
-
-            border-radius:
-                50%;
-
-            object-fit:
-                cover;
-
-            border:
-                1px solid rgba(214,173,103,.45);
-
-            box-shadow:
-                0 0 20px rgba(196,92,255,.2);
-
-        }
-
-
-        .brand-text strong {
-
-            display:
-                block;
-
-            color:
-                var(--white);
+            color: var(--muted);
 
             font-family:
-                "Noto Serif JP",
-                serif;
+                "DM Mono",
+                monospace;
 
-            font-size:
-                16px;
+            font-size: 10px;
 
-            letter-spacing:
-                1px;
-
+            letter-spacing: 1px;
         }
 
 
-        .brand-text span {
+        .status {
+            display: flex;
 
-            color:
-                var(--gold);
+            align-items: center;
 
-            font-family:
-                "Noto Serif JP",
-                serif;
-
-            font-size:
-                8px;
-
-            letter-spacing:
-                4px;
-
+            gap: 8px;
         }
 
 
-        .nav-links {
+        .status-dot {
+            width: 7px;
+            height: 7px;
 
-            display:
-                flex;
+            border-radius: 50%;
 
-            gap:
-                4px;
-
-            flex-wrap:
-                wrap;
-
-        }
-
-
-        .nav-link {
-
-            padding:
-                9px 13px;
-
-            border-radius:
-                12px;
-
-            color:
-                var(--muted);
-
-            background:
-                transparent;
-
-            cursor:
-                pointer;
-
-            font-size:
-                11px;
-
-            transition:
-                .25s ease;
-
-        }
-
-
-        .nav-link:hover,
-        .nav-link.active {
-
-            color:
-                white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(108,39,184,.75),
-                    rgba(196,92,255,.65)
-                );
+            background: #b58cff;
 
             box-shadow:
-                0 7px 25px rgba(196,92,255,.15);
+                0 0 12px
+                rgba(181,140,255,.8);
+
+            animation:
+                blink 2s ease-in-out infinite;
+        }
+
+
+        @keyframes blink {
+
+            50% {
+                opacity: .35;
+            }
 
         }
 
 
         /* =====================================================
-           CONTAINER
+           MAIN CARD
            ===================================================== */
 
-        main {
+        .profile-card {
+            position: relative;
 
-            width:
-                min(1150px, 92%);
+            overflow: hidden;
 
-            margin:
-                auto;
+            border:
+                1px solid
+                var(--line);
 
-            padding:
-                60px 0 90px;
+            border-radius:
+                34px;
 
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.065),
+                    rgba(255,255,255,.025)
+                );
+
+            box-shadow:
+                0 35px 100px
+                rgba(0,0,0,.45);
         }
 
 
-        section {
+        .profile-card::before {
+            content: "";
 
-            scroll-margin-top:
-                110px;
+            position: absolute;
 
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 15% 0%,
+                    rgba(141,77,255,.20),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 100% 50%,
+                    rgba(197,154,255,.08),
+                    transparent 30%
+                );
+
+            pointer-events: none;
         }
 
 
@@ -692,93 +371,19 @@
            ===================================================== */
 
         .hero {
+            position: relative;
 
-            position:
-                relative;
-
-            min-height:
-                620px;
-
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
-                .9fr 1.1fr;
+                250px 1fr;
 
-            align-items:
-                center;
+            gap: 45px;
 
-            gap:
-                45px;
+            align-items: center;
 
             padding:
-                60px;
-
-            overflow:
-                hidden;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                38px;
-
-            background:
-
-                radial-gradient(
-                    circle at 20% 30%,
-                    rgba(108,39,184,.25),
-                    transparent 35%
-                ),
-
-                radial-gradient(
-                    circle at 90% 10%,
-                    rgba(196,92,255,.2),
-                    transparent 30%
-                ),
-
-                linear-gradient(
-                    145deg,
-                    rgba(24,8,35,.9),
-                    rgba(7,3,11,.88)
-                );
-
-            box-shadow:
-                var(--shadow);
-
-        }
-
-
-        .hero::before {
-
-            content:
-                "紫";
-
-            position:
-                absolute;
-
-            right:
-                -60px;
-
-            bottom:
-                -110px;
-
-            font-family:
-                "Noto Serif JP",
-                serif;
-
-            font-size:
-                400px;
-
-            line-height:
-                1;
-
-            color:
-                rgba(196,92,255,.025);
-
-            pointer-events:
-                none;
-
+                55px;
         }
 
 
@@ -786,776 +391,374 @@
            AVATAR
            ===================================================== */
 
-        .hero-avatar-area {
+        .avatar-area {
+            display: flex;
 
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
+            justify-content: center;
         }
 
 
-        .avatar-orbit {
+        .avatar-ring {
+            position: relative;
 
-            position:
-                relative;
+            width: 205px;
+            height: 205px;
 
-            width:
-                350px;
+            display: grid;
+            place-items: center;
 
-            aspect-ratio:
-                1;
-
-            display:
-                grid;
-
-            place-items:
-                center;
-
-            border-radius:
-                50%;
+            border-radius: 50%;
 
             background:
-
-                radial-gradient(
-                    circle,
-                    rgba(196,92,255,.25),
-                    transparent 62%
+                linear-gradient(
+                    145deg,
+                    rgba(141,77,255,.5),
+                    rgba(228,168,255,.1)
                 );
 
-            border:
-                1px solid rgba(214,173,103,.3);
-
             box-shadow:
-                0 0 100px rgba(108,39,184,.3);
+                0 0 70px
+                rgba(141,77,255,.18);
 
             animation:
-                floating 5s ease-in-out infinite;
-
+                avatarFloat 5s ease-in-out infinite;
         }
 
 
-        .avatar-orbit::before {
+        .avatar-ring::before {
+            content: "";
 
-            content:
-                "";
+            position: absolute;
 
-            position:
-                absolute;
+            inset: 7px;
 
-            inset:
-                20px;
+            border-radius: 50%;
+
+            background:
+                var(--bg);
 
             border:
-                1px solid rgba(214,173,103,.3);
-
-            border-radius:
-                50%;
-
-        }
-
-
-        .avatar-orbit::after {
-
-            content:
-                "✦   ✧   ✦";
-
-            position:
-                absolute;
-
-            top:
-                -22px;
-
-            color:
-                var(--gold-light);
-
-            letter-spacing:
-                9px;
-
-            font-size:
-                15px;
-
+                1px solid
+                rgba(255,255,255,.08);
         }
 
 
         .avatar {
+            position: relative;
 
-            width:
-                230px;
+            width: 180px;
+            height: 180px;
 
-            height:
-                230px;
+            object-fit: cover;
 
-            object-fit:
-                cover;
+            border-radius: 50%;
 
-            border-radius:
-                50%;
+            z-index: 1;
 
             border:
-                5px solid rgba(255,255,255,.07);
+                3px solid
+                rgba(255,255,255,.08);
 
             box-shadow:
-
-                0 25px 60px rgba(0,0,0,.5),
-
-                0 0 50px rgba(196,92,255,.25);
-
+                0 15px 45px
+                rgba(0,0,0,.5);
         }
 
 
-        .avatar-tag {
+        .avatar-badge {
+            position: absolute;
 
-            position:
-                absolute;
+            right: -4px;
+            bottom: 14px;
 
-            right:
-                5px;
+            z-index: 3;
 
-            bottom:
-                25px;
+            width: 48px;
+            height: 48px;
 
-            padding:
-                11px 15px;
+            display: grid;
+            place-items: center;
 
             border:
-                1px solid rgba(214,173,103,.3);
+                3px solid
+                var(--bg);
 
-            border-radius:
-                999px;
-
-            color:
-                var(--white);
-
-            background:
-                rgba(9,4,15,.8);
-
-            backdrop-filter:
-                blur(10px);
-
-            font-size:
-                12px;
-
-        }
-
-
-        @keyframes floating {
-
-            0%,
-            100% {
-
-                transform:
-                    translateY(0)
-                    rotate(-1deg);
-
-            }
-
-            50% {
-
-                transform:
-                    translateY(-12px)
-                    rotate(1deg);
-
-            }
-
-        }
-
-
-        /* =====================================================
-           HERO TEXTO
-           ===================================================== */
-
-        .hero-content {
-
-            position:
-                relative;
-
-            z-index:
-                2;
-
-        }
-
-
-        .eyebrow {
-
-            display:
-                inline-flex;
-
-            align-items:
-                center;
-
-            gap:
-                8px;
-
-            padding:
-                8px 13px;
-
-            border:
-                1px solid rgba(214,173,103,.3);
-
-            border-radius:
-                999px;
-
-            color:
-                var(--soft);
-
-            background:
-                rgba(214,173,103,.04);
-
-            font-size:
-                10px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                2px;
-
-        }
-
-
-        .hero-title {
-
-            margin-top:
-                20px;
-
-            color:
-                var(--white);
-
-            font-family:
-                "Cormorant Garamond",
-                serif;
-
-            font-size:
-                clamp(80px, 10vw, 130px);
-
-            font-weight:
-                700;
-
-            line-height:
-                .72;
-
-            letter-spacing:
-                -5px;
-
-        }
-
-
-        .hero-title span {
-
-            background:
-                linear-gradient(
-                    100deg,
-                    #eadfff,
-                    #c45cff,
-                    #8d52ff
-                );
-
-            -webkit-background-clip:
-                text;
-
-            background-clip:
-                text;
-
-            color:
-                transparent;
-
-        }
-
-
-        .hero-jp {
-
-            margin-top:
-                22px;
-
-            color:
-                var(--gold-light);
-
-            font-family:
-                "Noto Serif JP",
-                serif;
-
-            font-size:
-                16px;
-
-            letter-spacing:
-                8px;
-
-        }
-
-
-        .hero-description {
-
-            max-width:
-                600px;
-
-            margin-top:
-                22px;
-
-            color:
-                var(--muted);
-
-            line-height:
-                1.9;
-
-            font-size:
-                15px;
-
-        }
-
-
-        .hero-actions {
-
-            display:
-                flex;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                11px;
-
-            margin-top:
-                28px;
-
-        }
-
-
-        .button {
-
-            display:
-                inline-flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            padding:
-                13px 19px;
-
-            border-radius:
-                14px;
-
-            cursor:
-                pointer;
-
-            font-size:
-                12px;
-
-            font-weight:
-                700;
-
-            transition:
-                .25s ease;
-
-        }
-
-
-        .button:hover {
-
-            transform:
-                translateY(-4px);
-
-        }
-
-
-        .button-primary {
-
-            color:
-                white;
+            border-radius: 50%;
 
             background:
                 linear-gradient(
                     135deg,
                     var(--purple),
-                    var(--violet)
+                    #b16cff
                 );
 
-            box-shadow:
-                0 12px 35px rgba(196,92,255,.2);
+            font-size: 19px;
 
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,.4);
         }
 
 
-        .button-secondary {
+        @keyframes avatarFloat {
 
-            color:
-                var(--text);
+            0%,
+            100% {
+                transform:
+                    translateY(0);
+            }
 
-            border:
-                1px solid var(--border);
-
-            background:
-                var(--glass);
-
+            50% {
+                transform:
+                    translateY(-8px);
+            }
         }
 
 
         /* =====================================================
-           SECTION
+           INTRO
            ===================================================== */
 
-        .section {
-
-            margin-top:
-                85px;
-
-        }
-
-
-        .section-heading {
-
-            margin-bottom:
-                28px;
-
-        }
-
-
-        .section-label {
-
-            color:
-                var(--violet);
-
-            font-size:
-                10px;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                4px;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        .section-title {
-
-            margin-top:
-                8px;
-
-            color:
-                var(--white);
+        .mini-label {
+            color: var(--purple-light);
 
             font-family:
-                "Cormorant Garamond",
-                serif;
+                "DM Mono",
+                monospace;
 
-            font-size:
-                clamp(45px, 7vw, 70px);
+            font-size: 10px;
 
-            line-height:
-                .95;
+            letter-spacing: 2px;
 
+            text-transform: uppercase;
         }
 
 
-        .section-description {
+        .name {
+            margin-top: 8px;
 
-            max-width:
-                680px;
+            font-size:
+                clamp(54px, 8vw, 86px);
 
-            margin-top:
-                12px;
+            line-height: .9;
 
-            color:
-                var(--muted);
+            letter-spacing: -5px;
 
-            line-height:
-                1.8;
+            font-weight: 800;
+        }
 
+
+        .name span {
+            color: var(--purple-light);
+        }
+
+
+        .pronouns {
+            margin-top: 14px;
+
+            color: var(--muted);
+
+            font-family:
+                "DM Mono",
+                monospace;
+
+            font-size: 11px;
+        }
+
+
+        .description {
+            max-width: 600px;
+
+            margin-top: 20px;
+
+            color: var(--soft);
+
+            font-size: 14px;
+
+            line-height: 1.9;
         }
 
 
         /* =====================================================
-           ORNAMENTO
+           TAGS
            ===================================================== */
 
-        .ornament {
+        .tags {
+            display: flex;
 
-            display:
-                flex;
+            flex-wrap: wrap;
 
-            align-items:
-                center;
+            gap: 8px;
 
-            justify-content:
-                center;
+            margin-top: 22px;
+        }
 
-            gap:
-                14px;
 
-            margin:
-                45px 0;
+        .tag {
+            padding:
+                7px 11px;
+
+            border:
+                1px solid
+                var(--line);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,.035);
 
             color:
-                var(--gold-light);
+                var(--soft);
 
+            font-size: 10px;
+
+            transition:
+                .25s ease;
         }
 
 
-        .ornament::before,
-        .ornament::after {
+        .tag:hover {
+            color: white;
 
-            content:
-                "";
+            border-color:
+                rgba(197,154,255,.35);
 
-            width:
-                150px;
+            background:
+                rgba(141,77,255,.12);
 
-            height:
-                1px;
-
+            transform:
+                translateY(-2px);
         }
 
 
-        .ornament::before {
+        /* =====================================================
+           DIVIDER
+           ===================================================== */
+
+        .divider {
+            height: 1px;
+
+            margin:
+                0 55px;
 
             background:
                 linear-gradient(
                     90deg,
                     transparent,
-                    var(--gold)
-                );
-
-        }
-
-
-        .ornament::after {
-
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--gold),
+                    var(--line),
                     transparent
                 );
-
         }
 
 
         /* =====================================================
-           SOBRE
+           CONTENT
            ===================================================== */
 
-        .about-grid {
-
-            display:
-                grid;
+        .content {
+            display: grid;
 
             grid-template-columns:
-                1.3fr .7fr;
+                1fr 1fr;
 
-            gap:
-                18px;
-
-        }
-
-
-        .glass-card {
-
-            padding:
-                30px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                var(--radius);
+            gap: 1px;
 
             background:
-                var(--surface);
-
-            backdrop-filter:
-                blur(18px);
-
-            box-shadow:
-                0 20px 60px rgba(0,0,0,.2);
-
+                var(--line);
         }
 
 
-        .about-text {
+        .panel {
+            padding:
+                38px 42px;
 
+            background:
+                rgba(9,7,13,.65);
+        }
+
+
+        .panel-title {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-bottom: 18px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: .5px;
+        }
+
+
+        .panel-title::before {
+            content: "✦";
+
+            color:
+                var(--purple-light);
+        }
+
+
+        .panel-text {
             color:
                 var(--muted);
 
-            line-height:
-                1.95;
+            font-size: 12px;
 
-            font-size:
-                14px;
-
-        }
-
-
-        .quote {
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            min-height:
-                100%;
-
-            text-align:
-                center;
-
-            color:
-                var(--white);
-
-            font-family:
-                "Cormorant Garamond",
-                serif;
-
-            font-size:
-                28px;
-
-            line-height:
-                1.25;
-
-        }
-
-
-        .quote span {
-
-            display:
-                block;
-
-            margin-top:
-                12px;
-
-            color:
-                var(--gold);
-
-            font-family:
-                "Noto Sans JP",
-                sans-serif;
-
-            font-size:
-                9px;
-
-            letter-spacing:
-                3px;
-
+            line-height: 1.9;
         }
 
 
         /* =====================================================
-           INTERESSES
+           INTERESTS
            ===================================================== */
 
-        .interest-grid {
+        .interest-list {
+            display: flex;
 
-            display:
-                grid;
+            flex-wrap: wrap;
 
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap:
-                15px;
-
+            gap: 8px;
         }
 
 
         .interest {
-
-            position:
-                relative;
-
             padding:
-                24px;
-
-            overflow:
-                hidden;
-
-            border:
-                1px solid var(--border);
+                9px 12px;
 
             border-radius:
-                var(--radius-small);
+                12px;
 
             background:
-                linear-gradient(
-                    145deg,
-                    rgba(108,39,184,.14),
-                    rgba(255,255,255,.025)
-                );
+                var(--glass);
+
+            border:
+                1px solid
+                var(--line);
+
+            color:
+                var(--soft);
+
+            font-size: 11px;
 
             transition:
-                .3s ease;
-
+                .25s ease;
         }
 
 
         .interest:hover {
-
             transform:
-                translateY(-6px);
+                translateY(-3px);
 
             border-color:
-                rgba(196,92,255,.4);
+                rgba(197,154,255,.3);
 
-            box-shadow:
-                0 20px 45px rgba(0,0,0,.25);
-
-        }
-
-
-        .interest-icon {
-
-            font-size:
-                26px;
-
-        }
-
-
-        .interest h3 {
-
-            margin-top:
-                14px;
-
-            color:
-                var(--white);
-
-            font-family:
-                "Noto Serif JP",
-                serif;
-
-            font-size:
-                18px;
-
-        }
-
-
-        .interest p {
-
-            margin-top:
-                7px;
-
-            color:
-                var(--muted);
-
-            font-size:
-                12px;
-
-            line-height:
-                1.6;
-
+            background:
+                rgba(141,77,255,.1);
         }
 
 
@@ -1563,525 +766,216 @@
            FANDOMS
            ===================================================== */
 
-        .fandom-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap:
-                12px;
-
-        }
-
-
         .fandom {
+            display: flex;
 
-            display:
-                flex;
+            align-items: center;
 
-            align-items:
-                center;
-
-            gap:
-                12px;
+            gap: 12px;
 
             padding:
-                16px 18px;
+                12px 0;
 
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                15px;
-
-            background:
-                rgba(255,255,255,.025);
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.05);
 
             color:
-                var(--text);
+                var(--soft);
 
-            transition:
-                .25s ease;
-
+            font-size: 12px;
         }
 
 
-        .fandom:hover {
-
-            transform:
-                translateX(5px);
-
-            border-color:
-                rgba(196,92,255,.4);
-
+        .fandom:last-child {
+            border-bottom: 0;
         }
 
 
         .fandom-icon {
+            width: 34px;
+            height: 34px;
 
-            color:
-                var(--violet);
+            display: grid;
+            place-items: center;
 
+            border-radius: 10px;
+
+            background:
+                rgba(141,77,255,.1);
+
+            font-size: 15px;
         }
 
 
         /* =====================================================
-           PORTFÓLIO
+           COMMISSIONS
            ===================================================== */
 
-        .portfolio-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap:
-                16px;
-
-        }
-
-
-        .portfolio-card {
-
-            position:
-                relative;
-
-            min-height:
-                240px;
-
-            display:
-                flex;
-
-            flex-direction:
-                column;
-
-            justify-content:
-                flex-end;
+        .commission-panel {
+            grid-column:
+                1 / -1;
 
             padding:
-                23px;
-
-            overflow:
-                hidden;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                var(--radius-small);
+                42px;
 
             background:
                 linear-gradient(
-                    145deg,
-                    rgba(108,39,184,.2),
-                    rgba(10,4,15,.9)
+                    135deg,
+                    rgba(141,77,255,.10),
+                    rgba(9,7,13,.7)
                 );
-
-            transition:
-                .3s ease;
-
         }
 
-
-        .portfolio-card::before {
-
-            content:
-                "✦";
-
-            position:
-                absolute;
-
-            top:
-                20px;
-
-            right:
-                20px;
-
-            color:
-                var(--gold);
-
-        }
-
-
-        .portfolio-card:hover {
-
-            transform:
-                translateY(-7px);
-
-            border-color:
-                rgba(196,92,255,.4);
-
-        }
-
-
-        .portfolio-number {
-
-            color:
-                var(--gold);
-
-            font-size:
-                9px;
-
-            letter-spacing:
-                3px;
-
-        }
-
-
-        .portfolio-card h3 {
-
-            margin:
-                8px 0;
-
-            color:
-                var(--white);
-
-            font-family:
-                "Noto Serif JP",
-                serif;
-
-            font-size:
-                21px;
-
-        }
-
-
-        .portfolio-card p {
-
-            color:
-                var(--muted);
-
-            font-size:
-                12px;
-
-            line-height:
-                1.6;
-
-        }
-
-
-        /* =====================================================
-           COMISSÕES
-           ===================================================== */
 
         .commission-grid {
-
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap:
-                16px;
+            gap: 12px;
 
+            margin-top: 24px;
         }
 
 
         .commission {
-
             padding:
-                28px;
+                20px;
 
             border:
-                1px solid var(--border);
+                1px solid
+                var(--line);
 
             border-radius:
-                var(--radius);
+                17px;
 
             background:
-                var(--surface);
+                rgba(255,255,255,.035);
 
             transition:
                 .3s ease;
-
-        }
-
-
-        .commission.featured {
-
-            border-color:
-                rgba(196,92,255,.5);
-
-            box-shadow:
-                0 20px 60px rgba(196,92,255,.1);
-
         }
 
 
         .commission:hover {
-
             transform:
-                translateY(-6px);
+                translateY(-5px);
 
+            border-color:
+                rgba(197,154,255,.32);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.2);
         }
 
 
-        .commission-tag {
-
-            color:
-                var(--violet);
-
-            font-size:
-                9px;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                2px;
-
+        .commission-icon {
+            font-size: 21px;
         }
 
 
         .commission h3 {
+            margin-top: 13px;
 
-            margin-top:
-                12px;
-
-            color:
-                var(--white);
-
-            font-family:
-                "Noto Serif JP",
-                serif;
-
-            font-size:
-                22px;
-
-        }
-
-
-        .commission-price {
-
-            margin:
-                16px 0;
-
-            color:
-                var(--white);
-
-            font-size:
-                30px;
-
-            font-weight:
-                800;
-
+            font-size: 14px;
         }
 
 
         .commission p {
+            margin-top: 7px;
 
             color:
                 var(--muted);
 
-            font-size:
-                12px;
+            font-size: 10px;
 
-            line-height:
-                1.7;
-
-        }
-
-
-        .commission ul {
-
-            list-style:
-                none;
-
-            margin-top:
-                18px;
-
-        }
-
-
-        .commission li {
-
-            padding:
-                8px 0;
-
-            color:
-                var(--muted);
-
-            font-size:
-                11px;
-
-            border-bottom:
-                1px solid rgba(255,255,255,.05);
-
-        }
-
-
-        .commission li::before {
-
-            content:
-                "✦";
-
-            margin-right:
-                8px;
-
-            color:
-                var(--violet);
-
+            line-height: 1.7;
         }
 
 
         /* =====================================================
-           REDES
+           CONTACT BUTTON
            ===================================================== */
 
-        .social-grid {
+        .contact-area {
+            padding:
+                38px 42px;
 
-            display:
-                grid;
+            display: flex;
 
-            grid-template-columns:
-                repeat(4, 1fr);
+            align-items: center;
+            justify-content: space-between;
 
-            gap:
-                12px;
+            gap: 25px;
 
+            background:
+                rgba(5,4,8,.75);
         }
 
 
-        .social {
+        .contact-title {
+            font-size: 18px;
 
-            display:
-                flex;
+            font-weight: 800;
+        }
 
-            align-items:
-                center;
 
-            justify-content:
-                center;
-
-            gap:
-                9px;
-
-            padding:
-                17px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                16px;
-
-            background:
-                var(--glass);
+        .contact-subtitle {
+            margin-top: 6px;
 
             color:
-                var(--text);
+                var(--muted);
 
-            font-size:
-                12px;
+            font-size: 11px;
+        }
 
-            font-weight:
-                700;
+
+        .discord-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding:
+                13px 19px;
+
+            border-radius:
+                13px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7041d9,
+                    #9b62ff
+                );
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 12px 30px
+                rgba(112,65,217,.25);
 
             transition:
                 .25s ease;
-
         }
 
 
-        .social:hover {
-
+        .discord-button:hover {
             transform:
-                translateY(-4px);
-
-            color:
-                white;
-
-            background:
-                rgba(196,92,255,.12);
-
-            border-color:
-                rgba(196,92,255,.4);
-
-        }
-
-
-        /* =====================================================
-           CONTATO
-           ===================================================== */
-
-        .contact {
-
-            position:
-                relative;
-
-            overflow:
-                hidden;
-
-            padding:
-                70px 30px;
-
-            text-align:
-                center;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                38px;
-
-            background:
-
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(196,92,255,.3),
-                    transparent 48%
-                ),
-
-                linear-gradient(
-                    135deg,
-                    rgba(108,39,184,.7),
-                    rgba(30,8,45,.9)
-                );
+                translateY(-3px);
 
             box-shadow:
-                var(--shadow);
-
-        }
-
-
-        .contact h2 {
-
-            color:
-                white;
-
-            font-family:
-                "Cormorant Garamond",
-                serif;
-
-            font-size:
-                clamp(45px, 7vw, 70px);
-
-        }
-
-
-        .contact p {
-
-            max-width:
-                620px;
-
-            margin:
-                14px auto 26px;
-
-            color:
-                rgba(255,255,255,.72);
-
-            line-height:
-                1.7;
-
-            font-size:
-                14px;
-
+                0 18px 40px
+                rgba(112,65,217,.35);
         }
 
 
@@ -2090,1276 +984,579 @@
            ===================================================== */
 
         footer {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
 
             padding:
-                35px 20px;
-
-            text-align:
-                center;
-
-            border-top:
-                1px solid var(--border);
+                25px 5px;
 
             color:
                 var(--muted);
 
-            font-size:
-                10px;
-
-        }
-
-
-        footer strong {
-
-            color:
-                var(--white);
-
             font-family:
-                "Noto Serif JP",
-                serif;
+                "DM Mono",
+                monospace;
 
+            font-size: 9px;
+
+            letter-spacing: 1px;
         }
 
 
-        .footer-jp {
-
-            margin-top:
-                8px;
-
+        .footer-symbol {
             color:
-                var(--gold);
+                var(--purple-light);
 
-            letter-spacing:
-                5px;
-
+            font-size: 15px;
         }
 
 
         /* =====================================================
-           BOTÃO VOLTAR AO TOPO
+           MOBILE
            ===================================================== */
 
-        .top-button {
-
-            position:
-                fixed;
-
-            right:
-                20px;
-
-            bottom:
-                20px;
-
-            width:
-                48px;
-
-            height:
-                48px;
-
-            display:
-                grid;
-
-            place-items:
-                center;
-
-            border:
-                1px solid var(--border);
-
-            border-radius:
-                50%;
-
-            color:
-                white;
-
-            background:
-                rgba(15,6,22,.82);
-
-            backdrop-filter:
-                blur(15px);
-
-            cursor:
-                pointer;
-
-            opacity:
-                0;
-
-            visibility:
-                hidden;
-
-            transform:
-                translateY(10px);
-
-            transition:
-                .3s ease;
-
-            z-index:
-                2000;
-
-        }
-
-
-        .top-button.visible {
-
-            opacity:
-                1;
-
-            visibility:
-                visible;
-
-            transform:
-                translateY(0);
-
-        }
-
-
-        .top-button:hover {
-
-            background:
-                var(--purple);
-
-            transform:
-                translateY(-4px);
-
-        }
-
-
-        /* =====================================================
-           RESPONSIVIDADE
-           ===================================================== */
-
-        @media (max-width: 950px) {
-
-            nav {
-
-                flex-direction:
-                    column;
-
-            }
-
-
-            .brand {
-
-                justify-content:
-                    center;
-
-            }
-
+        @media (max-width: 800px) {
 
             .hero {
-
                 grid-template-columns:
                     1fr;
 
-                text-align:
-                    center;
+                text-align: center;
 
                 padding:
-                    50px 35px;
-
+                    45px 30px;
             }
 
 
-            .hero-avatar-area {
-
-                order:
-                    -1;
-
+            .avatar-area {
+                order: -1;
             }
 
 
-            .hero-description {
-
-                margin-left:
-                    auto;
-
-                margin-right:
-                    auto;
-
+            .tags {
+                justify-content: center;
             }
 
 
-            .hero-actions {
-
-                justify-content:
-                    center;
-
-            }
-
-
-            .about-grid {
-
+            .content {
                 grid-template-columns:
                     1fr;
-
             }
 
 
-            .interest-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-
-            }
-
-
-            .portfolio-grid {
-
-                grid-template-columns:
-                    repeat(2,1fr);
-
+            .commission-panel {
+                grid-column:
+                    auto;
             }
 
 
             .commission-grid {
-
                 grid-template-columns:
-                    1fr 1fr;
-
+                    1fr;
             }
 
 
-            .social-grid {
+            .contact-area {
+                flex-direction: column;
 
-                grid-template-columns:
-                    repeat(2,1fr);
-
+                text-align: center;
             }
 
         }
 
 
-        @media (max-width: 620px) {
+        @media (max-width: 500px) {
 
-            header {
+            .wrapper {
+                width: 94%;
 
-                top:
-                    7px;
-
-                margin-top:
-                    7px;
-
+                padding-top: 25px;
             }
 
 
-            main {
-
-                width:
-                    92%;
-
-                padding-top:
-                    35px;
-
-            }
-
-
-            .nav-links {
-
-                width:
-                    100%;
-
-                display:
-                    grid;
-
-                grid-template-columns:
-                    repeat(3,1fr);
-
-            }
-
-
-            .nav-link {
-
+            .topbar {
                 padding:
-                    9px 4px;
+                    0 5px;
+            }
 
-                font-size:
-                    9px;
 
+            .profile-card {
+                border-radius:
+                    25px;
             }
 
 
             .hero {
-
-                min-height:
-                    auto;
-
                 padding:
                     40px 20px;
-
-                border-radius:
-                    28px;
-
             }
 
 
-            .hero-title {
-
-                font-size:
-                    72px;
-
-            }
-
-
-            .hero-description {
-
-                font-size:
-                    13px;
-
-            }
-
-
-            .avatar-orbit {
-
-                width:
-                    240px;
-
+            .avatar-ring {
+                width: 165px;
+                height: 165px;
             }
 
 
             .avatar {
-
-                width:
-                    160px;
-
-                height:
-                    160px;
-
+                width: 145px;
+                height: 145px;
             }
 
 
-            .avatar-tag {
+            .avatar-badge {
+                width: 42px;
+                height: 42px;
 
-                right:
-                    -5px;
-
-                bottom:
-                    5px;
-
+                right: -5px;
+                bottom: 5px;
             }
 
 
-            .interest-grid,
-            .portfolio-grid,
-            .commission-grid {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .fandom-grid {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .social-grid {
-
-                grid-template-columns:
-                    1fr 1fr;
-
-            }
-
-
-            .ornament::before,
-            .ornament::after {
-
-                width:
+            .name {
+                font-size:
                     55px;
 
+                letter-spacing:
+                    -3px;
             }
 
 
-            .section {
-
-                margin-top:
-                    60px;
-
+            .description {
+                font-size:
+                    12px;
             }
 
 
-            .contact {
+            .divider {
+                margin:
+                    0 20px;
+            }
 
+
+            .panel,
+            .commission-panel,
+            .contact-area {
                 padding:
-                    55px 20px;
+                    30px 22px;
+            }
 
+
+            footer {
+                flex-direction:
+                    column;
+
+                gap: 10px;
+
+                text-align:
+                    center;
             }
 
         }
 
 
+        /* =====================================================
+           ACCESSIBILITY
+           ===================================================== */
+
         @media (prefers-reduced-motion: reduce) {
 
-            * {
-
-                scroll-behavior:
-                    auto !important;
-
+            *,
+            *::before,
+            *::after {
                 animation:
                     none !important;
 
                 transition:
                     none !important;
 
+                scroll-behavior:
+                    auto !important;
             }
 
         }
 
     </style>
-
 </head>
 
 
 <body>
 
+    <!-- DECORAÇÕES -->
 
-    <!-- =====================================================
-         FLORES
-         ===================================================== -->
-
-    <div class="wisteria left">
-
-        <div class="vine"></div>
-        <div class="vine"></div>
-        <div class="vine"></div>
-
-        <div class="flower f1"></div>
-        <div class="flower f2"></div>
-        <div class="flower f3"></div>
-        <div class="flower f4"></div>
-        <div class="flower f5"></div>
-        <div class="flower f6"></div>
-
-    </div>
+    <div class="deco one">✦</div>
+    <div class="deco two">♡</div>
+    <div class="deco three">✧</div>
+    <div class="deco four">𓂃 ࣪˖</div>
 
 
-    <div class="wisteria right">
-
-        <div class="vine"></div>
-        <div class="vine"></div>
-        <div class="vine"></div>
-
-        <div class="flower f1"></div>
-        <div class="flower f2"></div>
-        <div class="flower f3"></div>
-        <div class="flower f4"></div>
-        <div class="flower f5"></div>
-        <div class="flower f6"></div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
-    <header>
-
-        <nav>
-
-            <a
-                href="#inicio"
-                class="brand"
-            >
-
-                <img
-                    src="avatar.jpg"
-                    alt="Vinz"
-                    class="brand-avatar"
-                >
-
-                <div class="brand-text">
-
-                    <strong>
-                        VINZ
-                    </strong>
-
-                    <span>
-                        紫音工房
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <div class="nav-links">
-
-                <a
-                    href="#inicio"
-                    class="nav-link active"
-                >
-                    Início
-                </a>
-
-                <a
-                    href="#sobre"
-                    class="nav-link"
-                >
-                    Sobre
-                </a>
-
-                <a
-                    href="#interesses"
-                    class="nav-link"
-                >
-                    Gostos
-                </a>
-
-                <a
-                    href="#fandoms"
-                    class="nav-link"
-                >
-                    Fandoms
-                </a>
-
-                <a
-                    href="#portfolio"
-                    class="nav-link"
-                >
-                    Portfólio
-                </a>
-
-                <a
-                    href="#comissoes"
-                    class="nav-link"
-                >
-                    Comissões
-                </a>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-
-
-    <!-- =====================================================
-         MAIN
-         ===================================================== -->
-
-    <main>
+    <div class="wrapper">
 
 
         <!-- =================================================
-             HERO
+             TOPO
              ================================================= -->
 
-        <section
-            id="inicio"
-            class="hero"
-        >
+        <div class="topbar">
 
+            <div class="status">
 
-            <div class="hero-avatar-area">
+                <span class="status-dot"></span>
 
-                <div class="avatar-orbit">
-
-                    <img
-                        src="avatar.jpg"
-                        alt="Avatar do Vinz"
-                        class="avatar"
-                    >
-
-                    <div class="avatar-tag">
-                        🦭 ✦
-                    </div>
-
-                </div>
+                ONLINE / OPEN FOR COMMISSIONS
 
             </div>
 
-
-
-            <div class="hero-content">
-
-                <div class="eyebrow">
-
-                    🪷 VOICE ACTOR · CREATOR
-
-                </div>
-
-
-                <h1 class="hero-title">
-
-                    VINZ
-
-                    <br>
-
-                    <span>Vinz.</span>
-
-                </h1>
-
-
-                <div class="hero-jp">
-
-                    紫音工房
-
-                </div>
-
-
-                <p class="hero-description">
-
-                    Oi! Eu sou o Vinz.
-
-                    <br><br>
-
-                    Apaixonado por dublagem, personagens,
-                    jogos, anime, música e tudo que envolve
-                    criatividade.
-
-                    <br><br>
-
-                    Meu objetivo é evoluir cada vez mais
-                    como dublador e dar vida a personagens
-                    através da minha voz.
-
-                </p>
-
-
-                <div class="hero-actions">
-
-                    <a
-                        href="#comissoes"
-                        class="button button-primary"
-                    >
-                        🎙️ Minhas comissões
-                    </a>
-
-
-                    <a
-                        href="#sobre"
-                        class="button button-secondary"
-                    >
-                        ✦ Conhecer o Vinz
-                    </a>
-
-                </div>
-
+            <div>
+                VINZ ♡ 2026
             </div>
 
-        </section>
-
-
-
-        <!-- =================================================
-             SOBRE
-             ================================================= -->
-
-        <section
-            id="sobre"
-            class="section"
-        >
-
-            <div class="section-heading">
-
-                <div class="section-label">
-                    ✦ SOBRE MIM
-                </div>
-
-                <h2 class="section-title">
-                    Um pouco sobre o Vinz.
-                </h2>
-
-            </div>
-
-
-            <div class="about-grid">
-
-
-                <article class="glass-card">
-
-                    <p class="about-text">
-
-                        Oi! Eu sou o Vinz! 🦭
-
-                        <br><br>
-
-                        Sou uma pessoa que gosta muito de
-                        criar, interpretar e experimentar
-                        coisas novas.
-
-                        <br><br>
-
-                        Tenho uma paixão enorme por voz
-                        e por personagens. Gosto daquela
-                        sensação de pegar uma personalidade
-                        e tentar fazer ela parecer viva
-                        através da interpretação.
-
-                        <br><br>
-
-                        Também curto bastante jogos,
-                        animes, RPG, música e guitarra.
-
-                        <br><br>
-
-                        Estou sempre tentando melhorar
-                        minhas habilidades e aprender
-                        alguma coisa nova.
-
-                        <br><br>
-
-                        Um dos meus maiores objetivos é
-                        conseguir trabalhar profissionalmente
-                        com dublagem no futuro.
-
-                    </p>
-
-                </article>
-
-
-                <article class="glass-card quote">
-
-                    <div>
-
-                        “Dar uma voz a um personagem
-                        é dar um pouco de vida a ele.”
-
-                        <span>
-                            — VINZ
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             INTERESSES
-             ================================================= -->
-
-        <section
-            id="interesses"
-            class="section"
-        >
-
-            <div class="section-heading">
-
-                <div class="section-label">
-                    ✦ INTERESTS
-                </div>
-
-                <h2 class="section-title">
-                    Coisas que eu gosto.
-                </h2>
-
-            </div>
-
-
-            <div class="interest-grid">
-
-
-                <article class="interest">
-
-                    <div class="interest-icon">
-                        🎙️
-                    </div>
-
-                    <h3>
-                        Dublagem
-                    </h3>
-
-                    <p>
-                        Vozes, personagens,
-                        interpretação e atuação.
-                    </p>
-
-                </article>
-
-
-                <article class="interest">
-
-                    <div class="interest-icon">
-                        🎸
-                    </div>
-
-                    <h3>
-                        Guitarra
-                    </h3>
-
-                    <p>
-                        Música e aprender coisas
-                        novas no instrumento.
-                    </p>
-
-                </article>
-
-
-                <article class="interest">
-
-                    <div class="interest-icon">
-                        🎮
-                    </div>
-
-                    <h3>
-                        Jogos
-                    </h3>
-
-                    <p>
-                        Games, experiências diferentes
-                        e mundos para explorar.
-                    </p>
-
-                </article>
-
-
-                <article class="interest">
-
-                    <div class="interest-icon">
-                        🎭
-                    </div>
-
-                    <h3>
-                        RPG
-                    </h3>
-
-                    <p>
-                        Personagens, histórias,
-                        mundos e interpretação.
-                    </p>
-
-                </article>
-
-
-                <article class="interest">
-
-                    <div class="interest-icon">
-                        🌸
-                    </div>
-
-                    <h3>
-                        Anime
-                    </h3>
-
-                    <p>
-                        Personagens e histórias
-                        que me inspiram.
-                    </p>
-
-                </article>
-
-
-                <article class="interest">
-
-                    <div class="interest-icon">
-                        🎵
-                    </div>
-
-                    <h3>
-                        Música
-                    </h3>
-
-                    <p>
-                        Trilhas, músicas e sons
-                        que fazem parte do meu dia.
-                    </p>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             FANDOMS
-             ================================================= -->
-
-        <section
-            id="fandoms"
-            class="section"
-        >
-
-            <div class="section-heading">
-
-                <div class="section-label">
-                    ✦ FANDOMS
-                </div>
-
-                <h2 class="section-title">
-                    Universos que eu curto.
-                </h2>
-
-            </div>
-
-
-            <div class="glass-card">
-
-                <div class="fandom-grid">
-
-
-                    <div class="fandom">
-
-                        <span class="fandom-icon">
-                            ◆
-                        </span>
-
-                        Undertale / Deltarune
-
-                    </div>
-
-
-                    <div class="fandom">
-
-                        <span class="fandom-icon">
-                            ◆
-                        </span>
-
-                        Dragon Ball Z
-
-                    </div>
-
-
-                    <div class="fandom">
-
-                        <span class="fandom-icon">
-                            ◆
-                        </span>
-
-                        Jujutsu Kaisen
-
-                    </div>
-
-
-                    <div class="fandom">
-
-                        <span class="fandom-icon">
-                            ◆
-                        </span>
-
-                        Minecraft
-
-                    </div>
-
-
-                    <div class="fandom">
-
-                        <span class="fandom-icon">
-                            ◆
-                        </span>
-
-                        Bleach
-
-                    </div>
-
-
-                    <div class="fandom">
-
-                        <span class="fandom-icon">
-                            ◆
-                        </span>
-
-                        ULTRAKILL
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             ORNAMENTO
-             ================================================= -->
-
-        <div class="ornament">
-            🪷
         </div>
 
 
-
         <!-- =================================================
-             PORTFÓLIO
+             CARD PRINCIPAL
              ================================================= -->
 
-        <section
-            id="portfolio"
-            class="section"
-        >
+        <main class="profile-card">
 
-            <div class="section-heading">
 
-                <div class="section-label">
-                    ✦ PORTFÓLIO
+            <!-- HERO -->
+
+            <section class="hero">
+
+
+                <div class="avatar-area">
+
+                    <div class="avatar-ring">
+
+                        <!--
+                            TROQUE ESTE ARQUIVO PELA SUA IMAGEM
+                        -->
+
+                        <img
+                            class="avatar"
+                            src="34993b2af43908118f8e32e9d625c857.jpg"
+                            alt="Vinz"
+                        >
+
+                        <div class="avatar-badge">
+                            🎙️
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h2 class="section-title">
-                    Meus trabalhos.
-                </h2>
 
-                <p class="section-description">
+                <div class="intro">
 
-                    Aqui você poderá colocar seus trabalhos
-                    de dublagem, personagens, fandubs,
-                    demonstrações de voz e projetos.
-
-                </p>
-
-            </div>
-
-
-            <div class="portfolio-grid">
-
-
-                <article class="portfolio-card">
-
-                    <div class="portfolio-number">
-                        PROJETO 01
+                    <div class="mini-label">
+                        𓂃 personal card / voice actor
                     </div>
 
-                    <h3>
-                        Em breve...
-                    </h3>
 
-                    <p>
-                        Primeiro projeto do portfólio.
-                    </p>
-
-                </article>
+                    <h1 class="name">
+                        V<span>inz</span>
+                    </h1>
 
 
-                <article class="portfolio-card">
-
-                    <div class="portfolio-number">
-                        PROJETO 02
+                    <div class="pronouns">
+                        he / him · voice actor · creator
                     </div>
 
-                    <h3>
-                        Em breve...
-                    </h3>
 
-                    <p>
-                        Um novo trabalho será adicionado aqui.
+                    <p class="description">
+
+                        Oii! Eu sou o Vinz :3
+
+                        <br>
+
+                        Gosto de dar voz a personagens, brincar
+                        com diferentes interpretações e transformar
+                        algumas ideias em algo que realmente tenha vida.
+
                     </p>
 
-                </article>
 
+                    <div class="tags">
 
-                <article class="portfolio-card">
+                        <span class="tag">
+                            🎙️ Dublagem
+                        </span>
 
-                    <div class="portfolio-number">
-                        PROJETO 03
+                        <span class="tag">
+                            🎭 Voice Acting
+                        </span>
+
+                        <span class="tag">
+                            🎮 Games
+                        </span>
+
+                        <span class="tag">
+                            🪻 Anime
+                        </span>
+
+                        <span class="tag">
+                            🦭 Seal energy
+                        </span>
+
                     </div>
 
-                    <h3>
-                        Voice Acting
-                    </h3>
-
-                    <p>
-                        Espaço para uma demonstração
-                        de personagem.
-                    </p>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             COMISSÕES
-             ================================================= -->
-
-        <section
-            id="comissoes"
-            class="section"
-        >
-
-            <div class="section-heading">
-
-                <div class="section-label">
-                    ✦ COMMISSIONS
                 </div>
 
-                <h2 class="section-title">
-                    Dublagem por comissão.
-                </h2>
-
-                <p class="section-description">
-
-                    Alguns exemplos de serviços.
-                    Os valores podem ser alterados
-                    conforme o projeto.
-
-                </p>
-
-            </div>
+            </section>
 
 
-            <div class="commission-grid">
+            <div class="divider"></div>
 
 
-                <article class="commission">
+            <!-- =================================================
+                 CONTEÚDO
+                 ================================================= -->
 
-                    <div class="commission-tag">
-                        BÁSICO
+            <section class="content">
+
+
+                <!-- INTERESSES -->
+
+                <article class="panel">
+
+                    <h2 class="panel-title">
+                        things i like
+                    </h2>
+
+
+                    <div class="interest-list">
+
+                        <span class="interest">
+                            🎸 Música
+                        </span>
+
+                        <span class="interest">
+                            🎙️ Dublagem
+                        </span>
+
+                        <span class="interest">
+                            🎮 RPG
+                        </span>
+
+                        <span class="interest">
+                            🎨 Criatividade
+                        </span>
+
+                        <span class="interest">
+                            🐉 Dragon Ball
+                        </span>
+
+                        <span class="interest">
+                            ⚔️ Jujutsu Kaisen
+                        </span>
+
+                        <span class="interest">
+                            💜 Undertale
+                        </span>
+
+                        <span class="interest">
+                            🌑 Deltarune
+                        </span>
+
+                        <span class="interest">
+                            ⛏️ Minecraft
+                        </span>
+
+                        <span class="interest">
+                            ⚡ Ultrakill
+                        </span>
+
                     </div>
-
-                    <h3>
-                        Fala curta
-                    </h3>
-
-                    <div class="commission-price">
-                        R$ 10
-                    </div>
-
-                    <p>
-                        Para pequenas falas,
-                        participações e personagens.
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            Até 5 falas
-                        </li>
-
-                        <li>
-                            Interpretação simples
-                        </li>
-
-                        <li>
-                            Entrega digital
-                        </li>
-
-                    </ul>
 
                 </article>
 
 
-                <article class="commission featured">
+                <!-- FANDOMS -->
 
-                    <div class="commission-tag">
-                        ✦ MAIS PEDIDO
+                <article class="panel">
+
+                    <h2 class="panel-title">
+                        fandoms
+                    </h2>
+
+
+                    <div class="fandom">
+
+                        <div class="fandom-icon">
+                            ⛏️
+                        </div>
+
+                        <div>
+                            <strong>Minecraft</strong>
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Personagem
-                    </h3>
 
-                    <div class="commission-price">
-                        R$ 20
+                    <div class="fandom">
+
+                        <div class="fandom-icon">
+                            💜
+                        </div>
+
+                        <div>
+                            <strong>Undertale</strong>
+                        </div>
+
                     </div>
 
-                    <p>
-                        Para personagens e cenas
-                        com mais interpretação.
-                    </p>
 
-                    <ul>
+                    <div class="fandom">
 
-                        <li>
-                            Até 15 falas
-                        </li>
+                        <div class="fandom-icon">
+                            🌑
+                        </div>
 
-                        <li>
-                            Interpretação de personagem
-                        </li>
+                        <div>
+                            <strong>Deltarune</strong>
+                        </div>
 
-                        <li>
-                            Uma revisão
-                        </li>
+                    </div>
 
-                        <li>
-                            Entrega digital
-                        </li>
 
-                    </ul>
+                    <div class="fandom">
+
+                        <div class="fandom-icon">
+                            ⚔️
+                        </div>
+
+                        <div>
+                            <strong>Jujutsu Kaisen</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="fandom">
+
+                        <div class="fandom-icon">
+                            🐉
+                        </div>
+
+                        <div>
+                            <strong>Dragon Ball</strong>
+                        </div>
+
+                    </div>
 
                 </article>
 
 
-                <article class="commission">
+                <!-- =================================================
+                     COMMISSIONS
+                     ================================================= -->
 
-                    <div class="commission-tag">
-                        PROJETO
-                    </div>
+                <article class="commission-panel">
 
-                    <h3>
-                        Projeto maior
-                    </h3>
+                    <h2 class="panel-title">
+                        commissions
+                    </h2>
 
-                    <div class="commission-price">
-                        Consulte
-                    </div>
 
-                    <p>
-                        Para projetos maiores,
-                        cenas ou vários personagens.
+                    <p class="panel-text">
+
+                        Faço trabalhos de voz para personagens,
+                        pequenas cenas, projetos independentes
+                        e outros trabalhos de dublagem.
+
                     </p>
 
-                    <ul>
 
-                        <li>
-                            Orçamento personalizado
-                        </li>
+                    <div class="commission-grid">
 
-                        <li>
-                            Valor negociável
-                        </li>
 
-                        <li>
-                            Prazo combinado
-                        </li>
+                        <div class="commission">
 
-                    </ul>
+                            <div class="commission-icon">
+                                🎙️
+                            </div>
+
+                            <h3>
+                                Voice Acting
+                            </h3>
+
+                            <p>
+                                Voz e interpretação para personagens.
+                            </p>
+
+                        </div>
+
+
+                        <div class="commission">
+
+                            <div class="commission-icon">
+                                🎬
+                            </div>
+
+                            <h3>
+                                Dublagem
+                            </h3>
+
+                            <p>
+                                Cenas, vídeos e projetos independentes.
+                            </p>
+
+                        </div>
+
+
+                        <div class="commission">
+
+                            <div class="commission-icon">
+                                🎭
+                            </div>
+
+                            <h3>
+                                Personagens
+                            </h3>
+
+                            <p>
+                                Vozes diferentes para personagens
+                                e ideias originais.
+                            </p>
+
+                        </div>
+
+
+                    </div>
 
                 </article>
 
 
-            </div>
-
-        </section>
+            </section>
 
 
+            <!-- =================================================
+                 CONTATO
+                 ================================================= -->
 
-        <!-- =================================================
-             REDES
-             ================================================= -->
+            <section class="contact-area">
 
-        <section
-            id="redes"
-            class="section"
-        >
+                <div>
 
-            <div class="section-heading">
+                    <div class="contact-title">
+                        Quer trabalhar comigo? ♡
+                    </div>
 
-                <div class="section-label">
-                    ✦ REDES
+                    <div class="contact-subtitle">
+                        Entre em contato pelo Discord para conversar
+                        sobre sua comissão.
+                    </div>
+
                 </div>
-
-                <h2 class="section-title">
-                    Me encontre por aí.
-                </h2>
-
-            </div>
-
-
-            <div class="social-grid">
 
 
                 <a
-                    class="social"
+                    class="discord-button"
                     href="https://discord.gg/ShdWqtpZc"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -3367,297 +1564,136 @@
                     💜 Discord
                 </a>
 
-
-                <a
-                    class="social"
-                    href="https://www.tiktok.com/@vinztheseal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    🎵 TikTok
-                </a>
+            </section>
 
 
-                <a
-                    class="social"
-                    href="https://youtube.com/@vinztheseal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    ▶️ YouTube
-                </a>
-
-
-                <a
-                    class="social"
-                    href="https://github.com/vinztheseal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    💻 GitHub
-                </a>
-
-
-            </div>
-
-        </section>
-
+        </main>
 
 
         <!-- =================================================
-             CONTATO
+             FOOTER
              ================================================= -->
 
-        <section
-            class="section"
-        >
+        <footer>
 
-            <div class="contact">
+            <span>
+                made with ♡ by Vinz
+            </span>
 
-                <h2>
-                    Vamos dar voz a uma história?
-                </h2>
+            <span class="footer-symbol">
+                🦭 ✦ 🪻
+            </span>
 
-                <p>
+            <span>
+                紫音
+            </span>
 
-                    Se você precisa de uma voz para
-                    um personagem, cena, fandub ou
-                    projeto independente, pode entrar
-                    em contato comigo.
-
-                </p>
+        </footer>
 
 
-                <a
-                    href="https://discord.gg/ShdWqtpZc"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button button-primary"
-                >
-                    💜 Falar comigo
-                </a>
+    </div>
 
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
-    <footer>
-
-        🦭 ✦
-
-        <strong>
-            VINZ
-        </strong>
-
-        ✦ 🎙️
-
-        <div class="footer-jp">
-            紫音工房
-        </div>
-
-        <br>
-
-        © 2026 Vinz —
-        Todos os direitos reservados.
-
-    </footer>
-
-
-
-    <!-- =====================================================
-         BOTÃO TOPO
-         ===================================================== -->
-
-    <button
-        class="top-button"
-        id="topButton"
-        aria-label="Voltar ao topo"
-    >
-        ↑
-    </button>
-
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
 
     <script>
 
-
         /* =====================================================
-           BOTÃO VOLTAR AO TOPO
+           VINZ — INTERAÇÕES
            ===================================================== */
 
-        const topButton =
-            document.getElementById("topButton");
+
+        // Pequeno efeito de movimento no card
+        // apenas em telas maiores.
+
+        const card =
+            document.querySelector(".profile-card");
 
 
-        window.addEventListener(
-            "scroll",
-            () => {
+        if (window.matchMedia("(min-width: 801px)").matches) {
 
-                if (window.scrollY > 500) {
+            document.addEventListener(
+                "mousemove",
+                (event) => {
 
-                    topButton.classList.add(
-                        "visible"
-                    );
+                    const x =
+                        (event.clientX / window.innerWidth - .5);
 
-                } else {
+                    const y =
+                        (event.clientY / window.innerHeight - .5);
 
-                    topButton.classList.remove(
-                        "visible"
-                    );
+
+                    card.style.transform =
+                        `perspective(1400px)
+                         rotateY(${x * 1.2}deg)
+                         rotateX(${y * -1.2}deg)`;
 
                 }
-
-            }
-        );
-
-
-        topButton.addEventListener(
-            "click",
-            () => {
-
-                window.scrollTo({
-
-                    top: 0,
-
-                    behavior: "smooth"
-
-                });
-
-            }
-        );
-
-
-
-        /* =====================================================
-           MENU ATIVO
-           ===================================================== */
-
-        const sections =
-            document.querySelectorAll(
-                "main section[id]"
             );
 
 
-        const navLinks =
-            document.querySelectorAll(
-                ".nav-link"
-            );
+            document.addEventListener(
+                "mouseleave",
+                () => {
 
+                    card.style.transform =
+                        "perspective(1400px) rotateY(0) rotateX(0)";
 
-        const observer =
-            new IntersectionObserver(
-                entries => {
-
-                    entries.forEach(entry => {
-
-                        if (
-                            entry.isIntersecting
-                        ) {
-
-                            navLinks.forEach(
-                                link => {
-
-                                    link.classList.remove(
-                                        "active"
-                                    );
-
-                                }
-                            );
-
-
-                            const active =
-                                document.querySelector(
-                                    `.nav-link[href="#${entry.target.id}"]`
-                                );
-
-
-                            if (active) {
-
-                                active.classList.add(
-                                    "active"
-                                );
-
-                            }
-
-                        }
-
-                    });
-
-                },
-
-                {
-                    rootMargin:
-                        "-35% 0px -55% 0px"
                 }
-
             );
 
+        }
 
-        sections.forEach(
-            section => observer.observe(section)
+
+        // Pequeno efeito nos interesses
+
+        const interests =
+            document.querySelectorAll(".interest");
+
+
+        interests.forEach((item) => {
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    item.style.transform =
+                        "scale(.95)";
+
+                    setTimeout(() => {
+
+                        item.style.transform =
+                            "";
+
+                    }, 120);
+
+                }
+            );
+
+        });
+
+
+        // Atualiza o ano automaticamente
+
+        const year =
+            new Date().getFullYear();
+
+
+        const footer =
+            document.querySelector("footer span:last-child");
+
+
+        if (footer) {
+
+            footer.dataset.year =
+                year;
+
+        }
+
+
+        console.log(
+            "🦭 Vinz card carregado!"
         );
-
-
-
-        /* =====================================================
-           SCROLL SUAVE
-           ===================================================== */
-
-        document
-            .querySelectorAll(
-                'a[href^="#"]'
-            )
-            .forEach(link => {
-
-                link.addEventListener(
-                    "click",
-                    event => {
-
-                        const target =
-                            document.querySelector(
-                                link.getAttribute("href")
-                            );
-
-
-                        if (target) {
-
-                            event.preventDefault();
-
-
-                            target.scrollIntoView({
-
-                                behavior:
-                                    "smooth",
-
-                                block:
-                                    "start"
-
-                            });
-
-                        }
-
-                    }
-                );
-
-            });
-
 
     </script>
 
-
 </body>
-
 </html>
